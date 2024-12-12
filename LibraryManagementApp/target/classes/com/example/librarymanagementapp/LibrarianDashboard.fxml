@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Header Section -->
+    <top>
+        <HBox spacing="20" style="-fx-background-color: #3F51B5; -fx-padding: 10;">
+            <ImageView fitHeight="40" fitWidth="40" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px;" text="Librarian Dashboard" />
+            <HBox alignment="CENTER_RIGHT" spacing="10" BorderPane.alignment="CENTER_RIGHT">
+                <Button style="-fx-text-fill: white; -fx-background-color: transparent;" text="Home" />
+                <Button style="-fx-text-fill: white; -fx-background-color: transparent;" text="Notifications" />
+                <Button style="-fx-text-fill: white; -fx-background-color: transparent;" text="Settings" />
+                <Button style="-fx-text-fill: white; -fx-background-color: transparent;" text="Logout" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Sidebar Section -->
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #E8EAF6; -fx-padding: 10;">
+            <Button style="-fx-background-color: transparent; -fx-font-size: 14px;" text="Dashboard Overview">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Button>
+            <Button style="-fx-background-color: transparent; -fx-font-size: 14px;" text="Manage Books" />
+            <Button style="-fx-background-color: transparent; -fx-font-size: 14px;" text="Manage Members" />
+            <Button style="-fx-background-color: transparent; -fx-font-size: 14px;" text="Borrow/Return Books" />
+            <Button style="-fx-background-color: transparent; -fx-font-size: 14px;" text="Reports" />
+            <Button style="-fx-background-color: transparent; -fx-font-size: 14px;" text="Settings" />
+        </VBox>
+    </left>
+
+    <!-- Main Content Section -->
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+
+            <!-- Dashboard Overview -->
+            <HBox spacing="20">
+                <VBox spacing="10" style="-fx-background-color: #FFEB3B; -fx-padding: 20;">
+                    <Label style="-fx-font-size: 18px;" text="Total Books" />
+                    <Label style="-fx-font-size: 24px;" text="5000" />
+                </VBox>
+                <VBox spacing="10" style="-fx-background-color: #4CAF50; -fx-padding: 20;">
+                    <Label style="-fx-font-size: 18px;" text="Available Books" />
+                    <Label style="-fx-font-size: 24px;" text="3500" />
+                </VBox>
+                <VBox spacing="10" style="-fx-background-color: #F44336; -fx-padding: 20;">
+                    <Label style="-fx-font-size: 18px;" text="Active Loans" />
+                    <Label style="-fx-font-size: 24px;" text="1500" />
+                </VBox>
+            </HBox>
+
+            <!-- TableView Example -->
+            <TableView fx:id="tableView" style="-fx-padding: 10;">
+                <columns>
+                    <TableColumn text="ID" />
+                    <TableColumn text="Title" />
+                    <TableColumn text="Author" />
+                    <TableColumn text="Category" />
+                    <TableColumn text="Status" />
+                </columns>
+            </TableView>
+
+            <!-- Search and Action Buttons -->
+            <HBox spacing="15">
+                <TextField promptText="Search..." style="-fx-padding: 5;" />
+                <Button style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Add Book" />
+                <Button style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Edit Book" />
+                <Button style="-fx-background-color: #F44336; -fx-text-fill: white;" text="Delete Book" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
