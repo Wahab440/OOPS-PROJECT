@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagement.Admin.ManageUserController">
+    <Label alignment="CENTER" layoutY="-2.0" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #011a11;" text="MANAGE USERS" textFill="WHITE">
+        <font>
+          <Font name="System Bold" size="28.0" />
+        </font>
+    </Label>
+    <Label layoutX="172.0" layoutY="90.0" text="Username">
+        <font>
+          <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <Label layoutX="170.0" layoutY="136.0" text="Password">
+        <font>
+          <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="IDLabel" layoutX="168.0" layoutY="218.0" text="Enrollment">
+        <font>
+          <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <Label layoutX="172.0" layoutY="268.0" text="User Type">
+        <font>
+          <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="Usernametf" layoutX="279.0" layoutY="86.0" promptText="Username" />
+    <TextField fx:id="IDtf" layoutX="279.0" layoutY="213.0" />
+    <PasswordField fx:id="Passwordpf" layoutX="279.0" layoutY="132.0" promptText="Password" />
+    <Label layoutX="148.0" layoutY="173.0" text="Confirm Password">
+        <font>
+          <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <PasswordField fx:id="CPasswordpf" layoutX="279.0" layoutY="169.0" promptText="Confirm Password" />
+    <ComboBox fx:id="UserTypecb" layoutX="279.0" layoutY="264.0" prefHeight="26.0" prefWidth="160.0" />
+    <HBox layoutX="9.0" layoutY="334.0" prefHeight="35.0" prefWidth="582.0" spacing="60.0">
+        <Button fx:id="Addbtn" alignment="CENTER" mnemonicParsing="false" onAction="#AddUser" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #011a11; -fx-background-radius: 10;" text="Add" textFill="WHITE">
+            <HBox.margin>
+                <Insets left="25.0" />
+            </HBox.margin>
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="Editbtn" alignment="CENTER" mnemonicParsing="false" onAction="#EditUser" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #011a11; -fx-background-radius: 10;" text="Edit" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="Deletebtn" alignment="CENTER" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #011a11; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="Backbtn" alignment="CENTER" mnemonicParsing="false" onAction="#GoBack" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #011a11; -fx-background-radius: 10;" text="Back" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+    </HBox>
+    <TableView fx:id="UserTable" layoutX="9.0" layoutY="391.0" prefHeight="246.0" prefWidth="582.0">
+      <columns>
+          <TableColumn fx:id="idCol" prefWidth="139.0" text="User ID" />
+          <TableColumn fx:id="UsernameCol" prefWidth="161.0" text="Username" />
+          <TableColumn fx:id="PasswordCol" prefWidth="185.0" text="Password" />
+          <TableColumn fx:id="UserTypeCol" prefWidth="96.0" text="User Type" />
+      </columns>
+    </TableView>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagement.Librarian.ManageBorrowRequests">
+    <Label alignment="CENTER" prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #011a11;" text="MANAGE BORROW REQUESTS" textFill="WHITE">
+        <font>
+          <Font name="System Bold" size="28.0" />
+        </font>
+    </Label>
+    <TableView fx:id="BorrowRequestsTable" layoutY="48.0" onMouseClicked="#handleTableClick" prefHeight="300.0" prefWidth="600.0">
+      <columns>
+          <TableColumn fx:id="ISBNCol" prefWidth="192.0" text="ISBN" />
+          <TableColumn fx:id="UsernameCol" prefWidth="230.0" text="Username" />
+          <TableColumn fx:id="StatusCol" prefWidth="177.0" text="STATUS" />
+      </columns>
+    </TableView>
+   <Button fx:id="Backbtn" alignment="CENTER" layoutX="250.0" layoutY="354.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #011a11; -fx-background-radius: 8;" text="BACK" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Button>
+</AnchorPane>

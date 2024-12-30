@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagement.Admin.AdminDashboardController">
+   <top>
+      <Label alignment="CENTER" prefHeight="40.0" prefWidth="606.0" style="-fx-background-color: #011a11;" text="ADMIN DASHBOARD" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: darkgrey;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <Button fx:id="Homebtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#HomePage" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #011a11; -fx-background-radius: 12;" text="Home" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="10.0" top="30.0" />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button fx:id="ManageUsersbtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ManageUsers" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #011a11; -fx-background-radius: 12;" text="Manage Users" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button fx:id="ManageBooksbtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ManageBooks" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #011a11; -fx-background-radius: 12;" text="Manage Books" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button fx:id="Logoutbtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Logout" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #011a11; -fx-background-radius: 12; -fx-border-color: Black; -fx-border-radius: 12;" text="Logout" textFill="WHITE">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+      </VBox>
+   </center>
+</BorderPane>
